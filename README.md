@@ -1,0 +1,2 @@
+# Simple_Apple_Web
+模仿与实现一个简易的静态Apple网站
