@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Apple</title>
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<script>
+function show()
+{   
+var t=new Date();
+
+var h=t.getHours();
+var m=t.getMinutes();
+var s=t.getSeconds();
+
+var display=h+":"+m+":"+s;
+if (h>12)
+document.getElementById("showTime").value=display+"PM";
+//document.writeln(display+"PM");
+else
+document.getElementById("showTime").value=display+"AM";
+
+//document.writeln(display+"AM");
+var disTime=setTimeout("show()",1000);
+}
+
+</script>
+<script type="text/javascript">
+if (window.localStorage) alert("你的浏览器支持localstorage");
+else alert("你的浏览器不支持localstorage，请升级你的浏览器");
+function count(){
+	var vount;
+	if(localStorage.getItem("count")==null)
+		count=1;
+	else 
+		count=parseInt(localStorage.getItem("count"))+1;
+	if(count<1) 
+		alert("欢迎访问本网站");
+	else 
+		alert("你是第"+count+"位访客");
+	localStorage.setItem("count",count);
+	
+}
+	window.addEventListener("load",count,true);
+
+</script>
+</head>
+
+<body id=container onload="show()">
+
+<header>
+<nav>
+<ul>
+<h1>
+<li>
+  <a href="index.html"><img src="images/Apple.png" width="67" height="47"></a>
+<li>
+</h1>
+
+<li><a href="html/store.html">在线商店</a><li>
+<li><a href="html/Mac.html">Mac</a><li>
+<li><a href="html/iphone.html">iPhone</a><li>
+<li><a href="html/Watch.html">Watch</a><li>
+<li><a href="html/ipad.html">iPad</a><li>
+<li><a href="html/ipod.html">iPod</a><li>
+<li><a href="html/iTunes.html">iTunes</a><li>
+<li><a href="html/support.html">技术支持</a><li>
+</ul>
+</nav>
+</header>
+
+
+<section id="b">
+<form action="" method="get">
+<input type="text" id="showTime" width="400" height="50"/>
+</form>
+</section>
+
+<div id="picBox">
+	<ul id="show_pic" style="left:0;">
+    	<li><a href="html/ipad.html"><img src="images/images/ipad pro/iPadPro_Pencil-Hand-PRINT.jpg" width="960" height="750" alt="" title="" /></li>
+        <li><a href="html/iphone.html"><img src="images/images/iphone/iPhone6s-Hand-SafariQuickAction-PR-PRINT.jpg" width="960" height="840" alt="" title="" /></li>
+        <li><a href="html/itunes.html"><img src="images/images/itunes/iPad_15inch_MBP_wRet_iPhone_5_iTunes_PRINT.jpg" width="960" height="580" alt="" title="" /></li>
+        
+   </ul>
+    <ul id="icon_num">
+    	<li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        
+    </ul>
+</div>
+<script type="text/javascript">
+/**
+ *glide.layerGlide((oEventCont,oSlider,sSingleSize,sec,fSpeed,point);
+ *@param auto type:bolean 是否自动滑动 当值是true的时候 为自动滑动
+ *@param oEventCont type:object 包含事件点击对象的容器
+ *@param oSlider type:object 滑动对象
+ *@param sSingleSize type:number 滑动对象里单个元素的尺寸（width或者height）  尺寸是有point 决定
+ *@param second type:number 自动滑动的延迟时间  单位/秒
+ *@param fSpeed type:float   速率 取值在0.05--1之间 当取值是1时  没有滑动效果
+ *@param point type:string   left or top
+ */
+var glide =new function(){
+	function $id(id){return document.getElementById(id);};
+	this.layerGlide=function(auto,oEventCont,oSlider,sSingleSize,second,fSpeed,point){
+		var oSubLi = $id(oEventCont).getElementsByTagName('li');
+		var interval,timeout,oslideRange;
+		var time=1; 
+		var speed = fSpeed 
+		var sum = oSubLi.length;
+		var a=0;
+		var delay=second * 1000; 
+		var setValLeft=function(s){
+			return function(){
+				oslideRange = Math.abs(parseInt($id(oSlider).style[point]));	
+				$id(oSlider).style[point] =-Math.floor(oslideRange+(parseInt(s*sSingleSize) - oslideRange)*speed) +'px';		
+				if(oslideRange==[(sSingleSize * s)]){
+					clearInterval(interval);
+					a=s;
+				}
+			}
+		};
+		var setValRight=function(s){
+			return function(){	 	
+				oslideRange = Math.abs(parseInt($id(oSlider).style[point]));							
+				$id(oSlider).style[point] =-Math.ceil(oslideRange+(parseInt(s*sSingleSize) - oslideRange)*speed) +'px';
+				if(oslideRange==[(sSingleSize * s)]){
+					clearInterval(interval);
+					a=s;
+				}
+			}
+		}
+		
+		function autoGlide(){
+			for(var c=0;c<sum;c++){oSubLi[c].className='';};
+			clearTimeout(interval);
+			if(a==(parseInt(sum)-1)){
+				for(var c=0;c<sum;c++){oSubLi[c].className='';};
+				a=0;
+				oSubLi[a].className="active";
+				interval = setInterval(setValLeft(a),time);
+				timeout = setTimeout(autoGlide,delay);
+			}else{
+				a++;
+				oSubLi[a].className="active";
+				interval = setInterval(setValRight(a),time);	
+				timeout = setTimeout(autoGlide,delay);
+			}
+		}
+	
+		if(auto){timeout = setTimeout(autoGlide,delay);};
+		for(var i=0;i<sum;i++){	
+			oSubLi[i].onmouseover = (function(i){
+				return function(){
+					for(var c=0;c<sum;c++){oSubLi[c].className='';};
+					clearTimeout(timeout);
+					clearInterval(interval);
+					oSubLi[i].className="active";
+					if(Math.abs(parseInt($id(oSlider).style[point]))>[(sSingleSize * i)]){
+						interval = setInterval(setValLeft(i),time);
+						this.onmouseout=function(){if(auto){timeout = setTimeout(autoGlide,delay);};};
+					}else if(Math.abs(parseInt($id(oSlider).style[point]))<[(sSingleSize * i)]){
+							interval = setInterval(setValRight(i),time);
+						this.onmouseout=function(){if(auto){timeout = setTimeout(autoGlide,delay);};};
+					}
+				}
+			})(i)			
+		}
+	}
+}
+glide.layerGlide(true,'icon_num','show_pic',960,2.3,0.01,'left');
+</script>
+<section><a href="html/iphone.html"><img src="images/images/iphone/iphone/360截图20141219193837870.jpg" width="300" height="175.43">
+</section>
+<section id="c"><a href="html/ipad.html"><img src="images/1.jpg" width="240" height="115"></section>
+<section id="c"><a href="html/iphone.html"><img src="images/2.jpg" width="240" height="115"></section>
+<section id="c"><a href="html/Watch.html"><img src="images/3.jpg" width="240" height="115"></section>
+<section id="c"><a href="html/Mac.html"><img src="images/4.jpg" width="240" height="115"></section>
+
+
+
+</body>
+</html>

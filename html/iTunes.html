@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>ITunes</title>
+<link rel="stylesheet" type="text/css" href="../css/iTunes.css">
+</head>
+<a id="top"></a>
+
+
+<body id=container>
+<header>
+<nav>
+<ul>
+<h1>
+<li>
+  <a href="../index.html"><img src="../images/Apple.png" width="67" height="47"></a>
+<li></h1>
+<li><a href="store.html">在线商店</a><li>
+<li><a href="Mac.html">Mac</a><li>
+<li><a href="iphone.html">iPhone</a><li>
+<li><a href="Watch.html">Watch</a><li>
+<li><a href="ipad.html">iPad</a><li>
+<li><a href="ipod.html">iPod</a><li>
+<li><a href="iTunes.html">iTunes</a><li>
+<li><a href="support.html">技术支持</a><li></ul></nav>
+</header>
+
+
+
+<section id="a">
+<canvas id="mycanvas" height="200" width="960"   style="background-color:#FFF"></canvas>
+<script>
+var mycanvas=document.getElementById("mycanvas");
+var mycontent=mycanvas.getContext('2d');
+var a=60;
+var width=500;
+var height=500;
+var exp=1;
+function draw(){
+mycontent.clearRect(0,0,width,height);
+	mycontent.beginPath();
+	mycontent.arc(a+50,101,40,0,Math.PI*2,true);
+	mycontent.arc(a,100,25,0,Math.PI*2,true);
+	mycontent.arc(a,100,25,0,Math.PI*2,true);
+	mycontent.fillStyle='000';
+	mycontent.fill();
+	mycontent.closePath();
+	a=a+exp;
+	if (a==width-110||a==25)
+	  exp=exp*(-1);
+}
+</script>
+<br>
+&nbsp;
+<input type="button" value="开始" onClick="tt=setInterval(draw,10)">
+&nbsp;
+<input type="button" value="停止" onClick="clearInterval(tt);">
+
+</section>
+
+<section id="b">
+<section id="b3"><img src="../images/images/itunes/index_hero_title.png">
+</section>
+
+  <section id="b1">
+  <p><br>全新 iTunes 已经完全重新设计，让你更轻松地浏览与管理你的音乐、视频及更多内容。
+
+添加至你的收藏，随时随地播放。<br><br></p>
+  </section>
+  <section id="b2"><img src="../images/images/itunes/index_hero.jpg" width="960" height="545.59">
+</section>
+</section>
+<p>&nbsp;</p>
+
+<section id="c">
+  <section id="c1"><img src="../images/images/itunes/index_features_title.png" width="414" height="81">
+</section>
+<section id="c2"><img src="../images/images/itunes/index_itunes_features.jpg">
+</section>
+
+<section id="c3"><p><br>全新 iTunes 已经完全重新设计，让你更轻松地浏览与管理<br>你的音乐、视频及更多内容。
+
+添加至你的收藏，随时随地播放。</section><br><br>
+  
+</section>
+<section id="d"><a href="../download/您已完成iTunes下载.png" ><img src="../images/images/itunes/iTunes_DwlNow_zhcn_08092008.gif" width="226" height="44">
+ </a></section>
+
+<section id="z">
+<a href="mailto:459064600@qq.com">邮箱</a>
+<a href="../video/The New Look of OS X Yosemite.mp4" title="呵呵">联系我们</a>
+<a href="#top">返回顶部</a>
+</section>
+</body>
+</html>
+

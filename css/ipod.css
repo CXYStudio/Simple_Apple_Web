@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	padding:0px;
+	margin:0px;
+	text-align:center;
+	font:12px Arial,宋体;
+
+}
+#container{
+	width:960px;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+	height:1800px;
+	display:block;
+	}
+	
+	header nav ul{list-style:none;
+	padding-left:80px;
+	}
+	header nav{
+	width:100%;
+	height:30px;
+	background-color:#666;
+	padding-top:15px;
+	margin-top:5px;
+	}
+header nav ul h1 li{
+	margin-top:-15px;
+	}
+header nav ul li{
+	float:left;
+	width:90px;
+}
+header nav ul li a{text-decoration:none;
+font-size:18px;
+color:#FFF;
+}
+
+section#a{
+	width:100%;
+	height:120px;
+	padding:0px;
+	}
+	section#a nav{
+	width:100%;
+	height:30px;
+	padding-top:10px;
+	margin-top:5px;
+	}
+	section#a nav ul{list-style:none;
+	padding-left:70px;
+	}
+	section#a nav ul li a{
+		text-decoration:none;
+		font-size:12px;
+		margin-left:150px;
+		float:left;
+		}
+section#a1{
+	margin-left:80px;
+			width:760px;
+			height:1px;
+			background-color:#CCC;
+			}
+section#b{
+	width:100%;
+	height:450px;
+	background-color:#EAEAEA;
+	padding:px;
+	}
+	section#b nav{
+	width:100%;
+	height:30px;
+	}
+	section#b nav ul{list-style:none;
+	}
+	section#b nav ul li a{
+		text-decoration:none;
+		font-size:12px;
+		float:left;
+		}
+section#c{
+	width:33%;
+	height:240px;
+	background-color:#E6E6E6;
+	padding:0px;
+	float:left;
+	margin:3px;
+    }
+	section#c nav{
+	width:100%;
+	height:30px;
+	}
+	section#c nav ul{list-style:none;
+	}
+	section#c nav ul li a{
+		text-decoration:none;
+		font-size:12px;
+		float:left;
+		}
+section#d{
+	width:33%;
+	height:240px;
+	background-color:#E6E6E6;
+	padding:0px;
+	float:left;
+	margin:3px;
+	}
+	section#d nav{
+	width:100%;
+	height:30px;
+	}
+	section#d nav ul{list-style:none;
+	}
+	section#d nav ul li a{
+		text-decoration:none;
+		font-size:12px;
+		float:left;
+		}
+section#e{
+	width:32%;
+	height:240px;
+	background-color:#E6E6E6;
+	padding:0px;
+	float:left;
+	margin:3px;
+	margin-right:0px;
+	}
+	section#e nav{
+	width:100%;
+	height:30px;
+	}
+	section#e nav ul{list-style:none;
+	}
+	section#e nav ul li a{
+		text-decoration:none;
+		font-size:12px;
+		float:left;
+		}
+section#f{
+	width:470px;
+	height:300px;
+	padding:0px;
+	float:left;
+	margin:3px;
+	margin-right:0px;
+	}
+	section#g{
+	width:470px;
+	height:300px;
+	padding:0px;
+	float:left;
+	margin:3px;
+	margin-left:13px;
+	}
+	section#g h1{
+		float:left;
+		}
+	section#g p#a{
+		font-family:Tahoma, Geneva, sans-serif;
+		font-size:40px;
+		float:left;
+		}
+		section#g p#b{
+			font-family:Tahoma, Geneva, sans-serif;
+			font-size:30px;
+			text-align:left;
+			}
+			section#g p#c{
+			font-size:15px;
+			text-align:left;
+			}
+			section#g nav {
+			font-size:13px;
+			text-align:left;
+			float:left;
+			text-decoration:none;
+			list-style:none;
+			}
+			section#g nav ul{
+			list-style:none;
+			}
+			section#g li a{
+			font-size:13px;
+			text-align:left;
+			float:left;
+			text-decoration:none;
+			list-style:none;
+			}
+			section#g p#e{
+			font-size:13px;
+			text-align:left;
+			}
+section#h{
+	width:960px;
+	height:350px;
+	padding:0px;
+	float:left;
+	background-color:#F2F2F2;
+	}
+	section#h section#i{
+	width:500px;
+	height:200px;
+	padding:15px;
+	margin-left:230px;
+	float:center;
+	}
+	section#h section#i nav{
+	margin-left:0px;
+	}
+	section#h section#i nav ul{
+		list-style:none;
+	}
+	section#h section#i nav ul li a{
+		text-decoration:none;
+		font-size:12px;
+		float:left;
+		}
+		section#h section#i1{
+			width:700px;
+			height:1px;
+			background-color:#CCC;
+			margin-left:130px;
+			}
+	section#h section#j{
+	width:24.5%;
+	height:200px;
+	background-color:#E6E6E6;
+	margin-top:2px;
+	float:left;
+	}
+	section#h section#j nav{
+	margin-left:0px;
+	}
+	section#h section#j nav ul{
+		list-style:none;
+	}
+	section#h section#j nav ul li a{
+		text-decoration:none;
+		font-size:12px;
+		float:left;
+		}
+	section#h section#k{
+	width:24%;
+	height:200px;
+	background-color:#E6E6E6;
+	margin-top:2px;
+	padding:0px;
+	float:left;
+	}
+	section#h section#k nav{
+	margin-left:0px;
+	}
+	section#h section#k nav ul{
+		list-style:none;
+	}
+	section#h section#k nav ul li a{
+		text-decoration:none;
+		font-size:12px;
+		float:left;
+		}
+section#z{
+	margin-top:200px;
+	float:left;
+	}
